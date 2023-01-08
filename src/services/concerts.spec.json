@@ -1,7 +1,21 @@
 [{
     "id" : "CONCERT_1",
-    "name" : "Mozart in the Park",
+    "name" : "Mozart at the Museum",
     "date" : "April 15, 2023",
     "ticketsPrinted" : 100,
     "ticketsSold" : 19
+},
+{
+    "id" : "CONCERT_2",
+    "name" : "Bach and Verdi on the Boulevard",
+    "date" : "May 1, 2023",
+    "ticketsPrinted" : 100,
+    "ticketsSold" : 79
+},
+{
+    "id" : "CONCERT_3",
+    "name" : "Handel on the Panhandle",
+    "date" : "Dec 29, 2023",
+    "ticketsPrinted" : 200,
+    "ticketsSold" : 50
 }]

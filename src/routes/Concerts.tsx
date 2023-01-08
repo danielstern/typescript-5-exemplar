@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react"
 import { getConcerts } from "../services/api-service"
+import { Navigation } from '../components/Navigation'
 
 type Concert = {
-  name : String
+  id : string
+  name : string,
+  date : Date | string,
 }
 export const Concerts = () => {
 
@@ -21,9 +24,10 @@ export const Concerts = () => {
 
   return (
     <div>
-      {concerts.map((concert : any) => (
-        <article>
-          {concert.name}
+      <Navigation />
+      {concerts.map(({name,date,id} : Concert) => (
+        <article key={id}>
+          {name} - {new Date(date).toLocaleDateString()}
         </article>
       ))}
     </div>

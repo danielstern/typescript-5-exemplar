@@ -1,66 +1,33 @@
-import { useState } from 'react'
 import './App.css'
-
-import {
-  createBrowserRouter,
-  Link,
-  RouterProvider,
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Concerts } from './routes/Concerts';
+import { Home } from './routes/Home'
+import { useState } from 'react';
+import { Dashboard } from './routes/Dashboard';
 
-const Navigation = () => (
-  <nav>
-    <Link to="/">Home</Link>
-    <Link to="/concerts">Concerts</Link>
-  </nav>
-)
 
-const Root = () => (
-  <div className="App">
-    <div className="header">
-      <h1>
-        Musician Portal
-      </h1>
-      <h2>
-        By Globomantics
-      </h2>
-      <Navigation/>
-    </div>
-  </div>
-)
+const App = () => {
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: < Root />,
-  },
-  {
-    path: "/concerts",
-    element: <Concerts />,
-  },
-]);
+  const [token, setToken] = useState(null)
 
-function App() {
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: token ? <Dashboard/> : <Home setToken={setToken}/>,
+    },
+    {
+      path: "/concerts",
+      element: <Concerts />,
+    },
+  ]);
 
   return (
     <div className="App">
-      {/* <div className="header">
-        <h1>
-          Musician Portal
-        </h1>
-        <h2>
-          By Globomantics
-        </h2>
-      </div>
-      <nav>
-        <Link to="/">Home</Link>
-        <Link to="/concerts">Concerts</Link>
-      </nav> */}
       <div>
         <RouterProvider router={router} />
       </div>
     </div>
-  )
+  )    
 }
 
 export default App
