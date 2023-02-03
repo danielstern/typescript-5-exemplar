@@ -1,4 +1,4 @@
-import { Navigation } from '../components/Navigation';
+import { Layout } from "../components/Layout"
 
 type DashboardRouteProps = {
   username : string
@@ -7,12 +7,11 @@ type DashboardRouteProps = {
 export const Dashboard = ({
   username = "Default User"
 } : DashboardRouteProps ) => (
-  <div className="App">
-    <div className="header">
-      <h2>
+  <Layout isSignedIn={true}>
+    <div className="dashboard">
+      <h3>
         You are signed in, {username}.
-      </h2>
-      <Navigation />
+      </h3>
     </div>
-  </div>
+  </Layout>
 )

@@ -1,9 +1,25 @@
 import { Link } from "react-router-dom";
 import "./navigation.css"
 
-export const Navigation = () => (
+type NavigationProps = {
+  handleLogin?: () => Promise<void>,
+  isSignedIn? : boolean,
+  username? : string
+}
+
+export const Navigation = ({
+  handleLogin,
+  isSignedIn
+} : NavigationProps ) => (
   <nav>
-    <Link to="/">Home</Link>
-    <Link to="/concerts">Concerts</Link>
-  </nav>
+    <h2>
+      Musician's Portal
+    </h2>
+    {isSignedIn ? <>
+      <Link to="/">Home</Link>
+      <Link to="/concerts">Concerts</Link>
+    </> : <button type="button" onClick={handleLogin}>
+      Automated Sign In
+    </button>}
+  </nav >
 )

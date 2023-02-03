@@ -3,4 +3,11 @@ nav {
   flex-direction: row;
   gap: 24px;
   justify-content: center;
+  position:fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: black;
+  padding: 24px 0px;
+  align-items: center;
 }

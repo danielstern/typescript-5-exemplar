@@ -1,12 +1,14 @@
-import { useEffect, useState } from "react"
+import { Layout } from "../components/Layout"
+import { useState } from 'react';
+import { useEffect, } from "react"
 import { getConcerts } from "../services/api-service"
-import { Navigation } from '../components/Navigation'
 
 type Concert = {
   id : string
   name : string,
   date : Date | string,
 }
+
 export const Concerts = () => {
 
   const [concerts, setConcerts] = useState<Concert[]>([])
@@ -23,13 +25,12 @@ export const Concerts = () => {
   }, [])
 
   return (
-    <div>
-      <Navigation />
+    <Layout isSignedIn={true}>
       {concerts.map(({name,date,id} : Concert) => (
         <article key={id}>
           {name} - {new Date(date).toLocaleDateString()}
         </article>
       ))}
-    </div>
+    </Layout>
   )
 }
