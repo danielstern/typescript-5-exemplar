@@ -10,7 +10,7 @@ export const Dashboard = ({
   <div className="App">
     <div className="header">
       <h2>
-        Welcome, {username}!
+        You are signed in, {username}.
       </h2>
       <Navigation />
     </div>
