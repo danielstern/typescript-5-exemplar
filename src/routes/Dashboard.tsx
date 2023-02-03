@@ -14,6 +14,5 @@ export const Dashboard = ({
       </h2>
       <Navigation />
     </div>
-    <footer>Code Whisperer</footer>
   </div>
 )

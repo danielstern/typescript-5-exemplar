@@ -13,6 +13,5 @@ export const Home = ({
         Automated Sign In
       </button>
     </div>
-    <footer>Code Whisperer</footer>
   </div>
 )

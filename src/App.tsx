@@ -1,4 +1,3 @@
-import './App.css'
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Concerts } from './routes/Concerts';
 import { Home } from './routes/Home'
@@ -35,6 +34,7 @@ const App = () => {
       <div>
         <RouterProvider router={router} />
       </div>
+      <footer>©2023,2024 Code Whisperer</footer>
     </div>
   )    
 }

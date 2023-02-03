@@ -75,3 +75,11 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+footer {
+  font-size: 10px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
