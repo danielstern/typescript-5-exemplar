@@ -11,7 +11,7 @@ const App = () => {
   const [token, setToken] = useState("")
   const [username, setUsername] = useState("")
 
-  const handleLogin = async () => {
+  const handleLogin = async () : Promise<void> => {
     const { token, username } = await automatedLogin()
     setToken(token)
     setUsername(username)

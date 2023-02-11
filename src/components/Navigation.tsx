@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import "./navigation.css"
 
 type NavigationProps = {
   handleLogin?: () => Promise<void>,
