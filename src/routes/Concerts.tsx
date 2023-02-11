@@ -1,13 +1,7 @@
 import { Layout } from "../components/Layout"
 import { useState } from 'react';
 import { useEffect, } from "react"
-import { getConcerts } from "../services/api-service"
-
-type Concert = {
-  id : string
-  name : string,
-  date : Date | string,
-}
+import { getConcerts, Concert } from "../services/api-service"
 
 export const Concerts = () => {
 
@@ -15,7 +9,7 @@ export const Concerts = () => {
 
   useEffect(() => {
 
-    const fetchData = async () => {
+    const fetchData = async () : Promise<void> => {
       const data : Concert[] = await getConcerts()
       setConcerts(data)
     }
