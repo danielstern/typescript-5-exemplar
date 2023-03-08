@@ -13,8 +13,13 @@
     "moduleResolution": "Node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx"
+    "noEmit": false,
+    "jsx": "react-jsx",
+    "outDir": "dist",
+  },
+  "watchOptions": {
+    "watchFile":"usefsevents",
+    "watchDirectory": "usefsevents"
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]

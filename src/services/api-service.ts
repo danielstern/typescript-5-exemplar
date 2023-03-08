@@ -14,4 +14,4 @@ export type Session = {
 }
 
 export const getConcerts = async () : Promise<Concert[]> => concerts
-export const automatedLogin = async () : Promise<Session> => ({token : `ABCD-1234`, username : `Code Whisperer`})
+export const automatedLogin = async () : Promise<Session> => ({token : `ABCD-12334`, username : `Code Whisperer`})
