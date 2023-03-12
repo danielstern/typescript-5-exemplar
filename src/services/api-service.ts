@@ -5,7 +5,8 @@ export type Concert = {
   name : string,
   date : Date | string,
   ticketsPrinted? : number,
-  ticketsSold? : number
+  ticketsSold? : number,
+  ticketPrice? : number
 }
 
 export type Session = {

@@ -2,6 +2,7 @@ import { Layout } from "../components/Layout"
 import { useState } from 'react';
 import { useEffect, } from "react"
 import { getConcerts, Concert } from "../services/api-service"
+// import { CalculateTicketPrice, Locale } from "../../com/ticket-pricing-module//src"
 
 export const Concerts = () => {
 
@@ -20,9 +21,10 @@ export const Concerts = () => {
 
   return (
     <Layout isSignedIn={true}>
-      {concerts.map(({name,date,id} : Concert) => (
+      {concerts.map(({name,date,id, ticketPrice} : Concert) => (
         <article key={id}>
-          {name} - {new Date(date).toLocaleDateString()}
+          <p>{name} - {new Date(date).toLocaleDateString()}</p>
+          {/* <p>${ticketPrice} (${CalculateTicketPrice(Locale.USD, false, ticketPrice, 10).toFixed(2)} for group tickets)</p> */}
         </article>
       ))}
     </Layout>
