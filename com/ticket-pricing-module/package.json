@@ -1,0 +1,15 @@
+{
+  "name": "ticket-pricing-module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node dist/spec.js"
+  },
+  "dependencies": {
+    "typescript": "^5.0.0-beta"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

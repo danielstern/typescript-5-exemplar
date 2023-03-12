@@ -1,5 +1,12 @@
 {
   "compilerOptions": {
-    "composite": true
-  }
+    "lib":["ES2022","dom"],
+    "outDir": "dist",
+    "composite": true,
+    "rootDir": "src",
+    // "declaration": false,
+    "declaration": true,
+  },
+  "include": ["src"]
+  
 }
